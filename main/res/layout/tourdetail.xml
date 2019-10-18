@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/dv"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<!--	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="?android:selectableItemBackground"
+		android:orientation="horizontal" />
+-->	
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:layout_gravity="top"
+		android:orientation="vertical"
+		android:paddingLeft="20dp"
+		android:paddingRight="20dp">
+		
+		<TableLayout
+			android:layout_height="fill_parent"
+			android:layout_width="fill_parent"
+			android:layout_gravity="top"
+			android:gravity="center">
+			<!-- android:stretchColumns="*"  -->
+			<TableRow>
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="top"
+					android:orientation="horizontal">
+					<TextView
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:id="@+id/detail_name"
+						android:layout_gravity="top"
+						android:gravity="center"
+						android:paddingLeft="10dp"
+						android:textAppearance="?android:attr/textAppearanceLarge"
+						android:background="@color/dark_green"
+						android:textColor="@android:color/white" />
+				</LinearLayout>
+			</TableRow>
+			<TableRow>
+				<LinearLayout
+					android:layout_width="@dimen/card_height"
+					android:layout_height="fill_parent"
+					android:rotation="-90"
+					android:layout_gravity="left"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:id="@+id/detail_item"
+						android:paddingLeft="10dp"
+						android:layout_gravity="left"
+						android:gravity="center"
+						android:textAppearance="?android:attr/textAppearanceLarge"
+						android:background="@color/dark_green"
+						android:textColor="@android:color/white"/>
+				</LinearLayout>
+				<ImageView
+					android:id="@+id/detail_photo"
+					android:layout_width="fill_parent"
+					android:layout_height="match_parent"
+					android:scaleType="centerInside"
+					android:contentDescription="TODO" />
+
+				<LinearLayout
+					android:layout_width="@dimen/card_height"
+					android:layout_height="fill_parent"
+					android:rotation="90"
+					android:layout_gravity="right"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:id="@+id/detail_heading"
+						android:layout_gravity="right"
+						android:gravity="center"
+						android:paddingLeft="10dp"
+						android:textAppearance="?android:attr/textAppearanceLarge"
+						android:background="@color/dark_green"
+						android:textColor="@android:color/white"/>
+				</LinearLayout>
+			</TableRow>
+			<TableRow>
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="bottom"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:id="@+id/detail_reference"
+						android:gravity="center"
+						android:textAppearance="?android:attr/textAppearanceLarge"
+						android:background="@color/dark_green"
+						android:textColor="@android:color/white"/>
+				</LinearLayout>
+			</TableRow>
+			<TableRow>
+				<TextView
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/detail_text"
+					android:gravity="center"
+					android:textAppearance="?android:attr/textAppearanceMedium"
+					android:background="@color/dark_green"
+					android:textColor="@android:color/white"/>
+			</TableRow>
+			<TableRow>
+				<EditText
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/detail_notes"
+				android:gravity="center"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:background="@color/dark_green"
+				android:textColor="@android:color/white"/>
+			</TableRow>
+			
+		</TableLayout>
+	</LinearLayout>
+</ScrollView>
+

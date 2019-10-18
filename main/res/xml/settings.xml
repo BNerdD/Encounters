@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+		android:key="BibleGateway?"
+	    android:title="@string/biblegateway_title"
+	    android:summary="@string/biblegateway_summary"
+	    android:defaultValue="true" />
+	<CheckBoxPreference
+		android:key="eternal"
+		android:title="@string/eternal_title"
+		android:summary="@string/eternal_summary"
+		android:defaultValue="true" />
+</PreferenceScreen>

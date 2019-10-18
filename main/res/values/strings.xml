@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 160328 MainActivity Apprentice Class -->
+
+    <string name="app_name">Encounters</string>
+    <string name="main_title">Encountering God at The British Museum</string>
+	<string name="continue_label">Enter the Bristish Museum...</string>
+    <string name="exit_label">Exit</string>
+	<string name="book_ref">NB Page numbers in brackets refer to the book: Through the British Museum with the Bible by Anderson and Edwards - available in the Museum bookshop.</string>
+	
+	
+
+	<!-- 160329 About Activity -->
+
+	<string name="about_title">Even more information...</string>
+	<string name="about_text">\
+		Nav Encounters is a personal study and mentoring resource from the Navigators UK.
+		The resource is designed to help anyone take the next step on a journey to meet, walk with and recommend Jesus Christ. 
+	</string>
+
+	<!-- 160330 Settings Menu -->
+
+	<string name="settings_label">Settings...</string>
+    <string name="settings_title">Encounter settings...</string>
+	<string name="settings_shortcut">s</string>
+	<string name="biblegateway_title">BibleGateway</string>
+	<string name="biblegateway_summary">Connect to BibleGateway?</string>
+	<string name="eternal_title">Eternal</string>
+	<string name="eternal_summary">Allow eternally significant applications only?</string>
+
+	<!-- 160331 New Study Dialog Box -->
+
+	<string name="new_encounter_title">Encounter Type?</string>
+	<string name="daily_label">Daily Encounter</string>
+	<string name="meeting_label">Meeting Jesus</string>
+	<string name="walking_label">Walking with Jesus</string>
+
+	<!-- 160421 encounterViews menu options -->
+
+	<string name="action_more">More Details</string>
+
+</resources>

@@ -1,0 +1,40 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uk.co.navigators.encounters">
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher" android:theme="@style/AppTheme">
+
+        <activity android:name=".Encounters">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity 
+			android:name=".EncounterViews"
+			android:label="British Museum Tour..."
+			android:theme="@android:style/Theme.WithActionBar" >			
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+		<activity
+            android:name=".EncounterViewDetail"
+            android:label="British Museum Tour...">
+        </activity>
+		
+		<activity
+            android:name=".About"
+            android:label="@string/about_title"
+			android:theme="@android:style/Theme.Dialog">
+        </activity>
+        <activity
+            android:name=".Prefs"
+            android:label="@string/settings_title">
+        </activity>
+		
+    </application>
+
+</manifest>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 160331 New Encounter Dialog -->
+<resources>
+	<array name="encounters">
+		<item>@string/daily_label</item>
+		<item>@string/meeting_label</item>
+		<item>@string/walking_label</item>
+	</array>
+</resources>

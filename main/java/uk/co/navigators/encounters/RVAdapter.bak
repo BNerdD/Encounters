@@ -1,0 +1,81 @@
+package uk.co.navigators.encounters;
+
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.List;
+
+// To create an adapter that a RecyclerView can use, you must extend RecyclerView.Adapter. 
+public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder> {
+
+    // This adapter follows the view holder design pattern, which means that 
+	// it is up to you to define a custom personviewholder class that extends RecyclerView.ViewHolder. 
+	public static class PersonViewHolder extends RecyclerView.ViewHolder {
+
+        CardView cv;
+        TextView personName;
+        TextView personAge;
+        ImageView personPhoto;
+
+        // Constructor for personviewholder
+		// This pattern minimizes the number of calls to the costly findViewById method. 
+		PersonViewHolder(View itemView) {
+            //Run all the default stuff then our own code..
+			super(itemView);
+            cv = (CardView)itemView.findViewById(R.id.cv);
+            personName = (TextView)itemView.findViewById(R.id.person_name);
+            personAge = (TextView)itemView.findViewById(R.id.person_age);
+            personPhoto = (ImageView)itemView.findViewById(R.id.person_photo);
+        }
+    }
+
+    // We ar using a list of the persons class
+	List<Person> persons;
+
+	// Add a class constructor to the custom adapter 
+	// Tell the adapter we are using a list of persons
+	// so that it has a handle to the data that the RecyclerView displays. 
+    RVAdapter(List<Person> persons){
+        this.persons = persons;
+    }
+
+    // RecyclerView.Adapter has four abstract methods that we must override.
+	
+	// just run all the default stuff for this method
+	@Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+    }
+
+    // When the next view in the list needs to be displayed...
+	// then inflate a new person view holder (for this adapter)
+	@Override
+    public PersonViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item, viewGroup, false);
+        PersonViewHolder pvh = new PersonViewHolder(v);
+        return pvh;
+    }
+    
+	// Override the onBindViewHolder to specify the contents of each item of theRecyclerView. 
+	// This method is very similar to the getView method of a ListView's adapter. 
+	// Create the initial list and then when the next view in the list needs to be displayed...
+	// Add the people details into the new view of the person
+    @Override
+    public void onBindViewHolder(PersonViewHolder personViewHolder, int i) {
+        personViewHolder.personName.setText(persons.get(i).name);
+        personViewHolder.personAge.setText(persons.get(i).age);
+        personViewHolder.personPhoto.setImageResource(persons.get(i).photoId);
+    }
+
+    // How many people do we have in the persons class
+	@Override
+    public int getItemCount() {
+        return persons.size();
+    }
+}
+

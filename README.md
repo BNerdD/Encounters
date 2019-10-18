@@ -13,19 +13,32 @@ Design:
     3. A menu option bar is inflated to allow The Prefs class to offer settings and then two options to be set/unset.
    
   The EncounterViews.class to put up a new RecyclerView card list filled with all museum tour artefacts - Called from Encounters class only
+  
     1. sets up an actionbar to toggle between card layout views - StaggeredGridLayoutManager show as grid or show as list
+    
     2. Sets up a recycler view adapter within a linearLayout view
+    
     3. Fill our Tour/Encounter CardView array list with data using SQLite
+    
 		Create the database if it not already there - cards = new CardData(this);
+		
 		Retrieve data from database uses a try and catch - SQLiteDatabase dbr = cards.getReadableDatabase();
+		
   		Tell the Activity to manage query, it will handle closing and requerying as needed - startManagingCursor(cursor);
+		
 		Populate views with card data -  initializeData(cursor);
+		
 	      	The adapter holds a tour.class that contains a list of EncounterViewTour.class items 
+		
               		tour.add(new EncounterViewTour("1", "Room 70 Case 27 Coin 3", "26-36AD", "image - Pontius Pilate", "John 19:12", "Enter notes here...", R.drawable.emma));
+			
 			tour.add(new EncounterViewTour("2", "Room 70 Case 27 Coin 3", "26-36AD", "image - Pontius Pilate", "John 19:12", "Enter notes here...", R.drawable.emma));
+			
         Initialise our modified adapter and start it running, Adapter fills screen with data - initializeAdapter();
+	
     4. Set up an onclick intent for the RecyclerView adapter 
       if the tour artefact is clicked the About.class activity is called with the rowid to display addition details of the artefact
+      
 
 The RVadapter.class builds a dynamic layout made up of LinearLayouts and textviews
   	placeHolder = (LinearLayout) itemView.findViewById(R.id.mainHolder);
